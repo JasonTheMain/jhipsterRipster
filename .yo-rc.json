@@ -1,0 +1,42 @@
+{
+  "generator-jhipster": {
+    "applicationType": "uaa",
+    "gitCompany": "",
+    "baseName": "HipWebsite",
+    "packageName": "io.github.jhipster.application",
+    "packageFolder": "io/github/jhipster/application",
+    "serverPort": 6969,
+    "serviceDiscoveryType": false,
+    "authenticationType": "jwt",
+    "uaaBaseName": "../uaa",
+    "cacheProvider": "no",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "cassandra",
+    "devDatabaseType": "cassandra",
+    "prodDatabaseType": "cassandra",
+    "searchEngine": false,
+    "enableSwaggerCodegen": false,
+    "messageBroker": false,
+    "buildTool": "gradle",
+    "useSass": false,
+    "clientPackageManager": "npm",
+    "testFrameworks": [],
+    "enableTranslation": false,
+    "nativeLanguage": "en",
+    "languages": [
+      "en"
+    ],
+    "clientFramework": "react",
+    "jhiPrefix": "jhi",
+    "jhipsterVersion": "6.1.2",
+    "jwtSecretKey": "NzIzODhhY2QwNzIzYTJhMzA5NTlhZGJjYWJiNzcwNDNlMzQ2MzBjYTg4NDJiMjEzMzUzMmU5ZjBkOWZmNmNiMTQ2MWYzNWZiMTM3ZWYxZDNlMzg0ZjFhOTZmY2IxYjBkZmQ5YjJhYzgxZjA5ZmM5ZWVmZGI5OWY2ZTY2ZTA5OWQ=",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "skipClient": true
+  },
+  "git-provider": "GitHub",
+  "git-company": "JasonTheMain",
+  "repository-name": "jhipsterRipster"
+}

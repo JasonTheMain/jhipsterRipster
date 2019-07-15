@@ -1,0 +1,24 @@
+version: '2'
+services:
+  hipwebsite-app:
+    image: hipwebsite
+    environment:
+      - _JAVA_OPTIONS=-Xmx512m -Xms256m
+      - SPRING_PROFILES_ACTIVE=prod,swagger
+      - MANAGEMENT_METRICS_EXPORT_PROMETHEUS_ENABLED=true
+      - SPRING_DATA_CASSANDRA_CONTACTPOINTS=hipwebsite-cassandra
+      - JHIPSTER_SLEEP=30 # gives time for other services to boot before the application
+  hipwebsite-cassandra:
+    extends:
+      file: cassandra-cluster.yml
+      service: hipwebsite-cassandra
+  hipwebsite-cassandra-node:
+    image: cassandra:3.11.4
+    environment:
+      - CASSANDRA_SEEDS=hipwebsite-cassandra
+  hipwebsite-cassandra-migration:
+    extends:
+      file: cassandra-migration.yml
+      service: hipwebsite-cassandra-migration
+    environment:
+      - CREATE_KEYSPACE_SCRIPT=create-keyspace-prod.cql
